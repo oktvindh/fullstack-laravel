@@ -13,6 +13,10 @@ use App\Models\Roles;
 
 class AuthController extends Controller
 {
+    public function showLoginForm()
+{
+    return view('auth.login');
+}
      public function register(Request $request) {
         $validator = Validator::make($request->all(), [
             'nama' => 'required|string|max:255',

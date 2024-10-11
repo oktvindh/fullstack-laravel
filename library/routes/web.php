@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\API\AuthController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+ Route::get('/admin/buku', function () {
+        return view('admin.buku');
+    });
+
