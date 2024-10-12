@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
- Route::get('/admin/buku', function () {
-        return view('admin.buku');
+ Route::get('/admin', function () {
+        return view('admin.bukuKategori');
     });
 

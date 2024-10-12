@@ -42,7 +42,7 @@
 
             if (response.ok) {
                 localStorage.setItem('token', data.token);
-                window.location.href = '/admin/buku'; // Redirect ke halaman Buku
+                window.location.href = '/admin'; 
             } else {
                 alert(data.messege);
             }
